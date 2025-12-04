@@ -1,0 +1,6 @@
+venv/
+__pycache__/
+outputs/
+models/yolov8_custom_detector/best.pt
+.env
+.DS_Store
