@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <title>FRCScorekeeper Dashboard</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 45px; }
+      .container { max-width: 900px; margin: auto; }
+      .video-list { margin-top: 20px; }
+      .flash { color: green; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>FRCScorekeeper</h1>
+      <form action="/upload" method="post" enctype="multipart/form-data">
+        <label for="video">Upload match video (MP4):</label><br>
+        <input type="file" name="video" accept="video/*"><br><br>
+        <button type="submit">Process</button>
+      </form>
+
+      <div class="video-list">
+        <h2>Annotated Outputs</h2>
+        <ul>
+          {% for v in videos %}
+            <li><a href="{{ url_for('outputs_video', fname=v) }}">{{ v }}</a></li>
+          {% else %}
+            <li>No outputs yet.</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+    </div>
+  </body>
+</html>

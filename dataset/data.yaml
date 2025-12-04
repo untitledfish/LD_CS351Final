@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 10
+names: ['blue_amping', 'blue_climbing', 'blue_idle', 'blue_intaking', 'blue_shooting', 'note', 'red_amping', 'red_climbing', 'red_idle', 'red_shooting']
+
+roboflow:
+  workspace: frctracker
+  project: frctrackermanual
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/frctracker/frctrackermanual/dataset/2

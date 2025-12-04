@@ -1,0 +1,56 @@
+{
+  "classes": {
+    "robot": 0,
+    "shooting_pose": 1,
+    "intaking_pose": 2,
+    "climb_pose": 3
+  },
+  "rules": [
+    {
+      "name": "shoot_high",
+      "class_trigger": "shooting_pose",
+      "score": 3,
+      "zone_required": "high_goal",
+      "frames_confirm": 3,
+      "cooldown_s": 2
+    },
+    {
+      "name": "pickup",
+      "class_trigger": "intaking_pose",
+      "score": 1,
+      "zone_required": null,
+      "frames_confirm": 2,
+      "cooldown_s": 1
+    },
+    {
+      "name": "climb",
+      "class_trigger": "climb_pose",
+      "score": 12,
+      "zone_required": "hab_zone",
+      "frames_confirm": 8,
+      "cooldown_s": 30
+    }
+  ],
+  "zones": {
+    "high_goal": [
+      [
+        1000,
+        50
+      ],
+      [
+        1400,
+        720
+      ]
+    ],
+    "hab_zone": [
+      [
+        0,
+        600
+      ],
+      [
+        400,
+        720
+      ]
+    ]
+  }
+}

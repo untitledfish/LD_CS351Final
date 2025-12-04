@@ -1,0 +1,6 @@
+python==3.11.*
+ultralytics>=8.0.0
+opencv-python
+flask
+numpy
+tqdm
